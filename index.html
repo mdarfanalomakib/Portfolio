@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="icon" href="assets/X.png" type="X/gif/png" width="10x">
+<body>
+    <header class="header">
+        <!-- <a href="#" class="logo">Portfolio</a> -->
+        <a href="#"><img src="assets/X.png"></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home"style="--i:1"  class="active">Home</a>
+            <a href="#about" style="--i:2">About</a> 
+            <a href="#services" style="--i:3">Skills</a>
+            <a href="#portfolio" style="--i:4">Projects</a>
+            <a href="#contact" style="--i:5">Contact</a>
+        </nav>
+    </header>
+
+    <!--HOme-->
+    <section class="home" id="home">
+        
+       
+        <div class="home-content">
+            <h3>It's Me</h3>
+            <h1>Md Arfan Alom Akib</h1>
+            <h3>A passionate <span class="x"></span></h3>
+                <p>Passionate web developer driven by creativity and innovation. Skilled in transforming concepts into engaging digital experiences with expertise in HTML, CSS, and JavaScript.</p>
+            <div class="social-media">
+                <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
+                <a href="#" style="--i:8"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="#" style="--i:9"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/mdarfanalomakib" style="--i:10" target="--blank"><i class='bx bxl-github' ></i></a>
+            </div>
+            <!-- <a href="" class="btn">Resume</a> -->
+        </div>
+        <div class="home-img">
+            <img src="assets/img.png" alt="">
+        </div>
+        
+    </section>
+<!--------------------------------------------------------------------------------------------------------->
+
+
+    <!--About-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/AKIB.png" alt="My img">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p>As a frontend developer, I specialize in creating dynamic and user-centric web experiences. With a solid foundation in HTML, CSS, and JavaScript, I craft responsive and visually appealing websites that captivate users and deliver seamless interactions.
+
+                From transforming creative ideas into functional interfaces to optimizing website performance for efficiency, I find joy in tackling the challenges of frontend development. I take pride in my attention to detail, ensuring every component contributes to an intuitive and engaging user experience.</p>
+        </div>
+       
+        
+        
+    </section>
+
+<!--------------------------------------------------------------------------------------------------------->
+
+    <!--services-->
+    <section class="services" id="services">
+        <h2 class="heading">Field of<span> Expertise</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <!-- <p> Weaving vibrant online worlds with HTML, CSS, and JavaScript for enchanting user journeys across every screen.</p> -->
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxs-paint' ></i>
+                <h3>Graphic Design</h3>
+                <!-- <p> Infusing brands with life through captivating visuals and compelling designs using Adobe Photoshop and Illustrator.</p> -->
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-game'></i>
+                <h3>Game Development</h3>
+                <!-- <p>Transforming imagination into reality, creating immersive worlds and thrilling adventures with cutting-edge game development tools like Unity.</p> -->
+            </div>
+        </div>
+    </section>
+<!--------------------------------------------------------------------------------------------------------->
+
+<!--Portfolio-->
+    <section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest<span> Projects</span></h2>
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+            <img src="assets/texteditor.jpg" alt="">
+            <div class="portfolio-layer">
+                <h4>Text Editor</h4>
+                <p>With Python</b></p>
+                <a href="https://github.com/mdarfanalomakib/Akib-Text-Editor" target="--blank"><i class='bx bx-link-external' ></i></a>
+            </div>
+        </div>  
+    </div>
+    </section>
+
+    <!--Contact-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form name="submit-to-google-sheet" action="#">
+            <div class="input-box">
+                <input type="text" name="Name" placeholder="Name">  
+            </div>
+
+            <div class="input-box">
+                <input type="email" Name="Email" placeholder="Email Address" required>
+            </div>
+            <textarea id="" cols="30" rows="10" placeholder="Your Message" name="Message" required></textarea>
+            <button type="submit" class="btn" style="--clr:#007bff;">Submit</button><br><br>
+            <span id="msg"></span>
+        </form>
+        
+    </section>
+
+    <!--Footer Design-->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Md Arfan Alom Akib | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+
+        </div>
+    </footer>
+
+<!-- Contact form script -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyUxKhFYs94rY7ZZ6oqRWgqrRQ298iKgjEh2LcPknTXbWgEc1jCY18JtkL967E9ABi7Pg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully."
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+<!-- ------------------------------ -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</body>
+</html>
