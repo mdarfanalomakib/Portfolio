@@ -6,11 +6,6 @@ Welcome to my portfolio! This is where creativity meets code and design. Here, y
 
 ---
 
-## 🖼️ **Preview**  
-![Portfolio Preview](https://mdarfanalomakib.github.io/Portfolio/1000x500?text=Portfolio+Preview)
-
----
-
 ## 🎯 **Features**
 - 🚀 Modern, clean, and responsive design
 - 🎨 Eye-catching animations and color schemes
